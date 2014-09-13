@@ -5,6 +5,7 @@
  */
 package UserInterface;
 
+import Business.VitalSign;
 import Business.VitalSignHistory;
 
 /**
@@ -121,8 +122,13 @@ public class CreateVitalSignJPanel extends javax.swing.JPanel {
         int pulse = Integer.parseInt(pulseJTextField.getText());
         String date = dateJTextField.getText();
         
-        
+        VitalSign vitalSign = this.vitalSignHistory.addVitalSign();
 
+        vitalSign.setTemperature(temperature);
+        vitalSign.setDate(date);
+        vitalSign.setBloodPressure(bloodPressure);
+        vitalSign.setPulse(pulse);
+        
     }//GEN-LAST:event_createVitalSignJButtonActionPerformed
 
 

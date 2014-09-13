@@ -47,5 +47,8 @@ public class VitalSign {
         this.date = date;
     }
     
-    
+    @Override
+    public String toString() {
+        return getDate();
+    }
 }
